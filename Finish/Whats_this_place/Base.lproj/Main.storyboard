@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whats_this_place" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="NBT-CF-BoS">
+                                <rect key="frame" x="24" y="30" width="327" height="313.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxH-BL-3Jc">
+                                <rect key="frame" x="187.5" y="363.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAK-Vz-gHC">
+                                <rect key="frame" x="20" y="393.5" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZc-n2-Uu8">
+                                <rect key="frame" x="172.5" y="463.5" width="31" height="30"/>
+                                <state key="normal" title="選圖"/>
+                                <connections>
+                                    <action selector="getPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GbJ-br-j60"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NBT-CF-BoS" secondAttribute="trailing" constant="24" id="487-Xu-1gJ"/>
+                            <constraint firstItem="oxH-BL-3Jc" firstAttribute="top" secondItem="NBT-CF-BoS" secondAttribute="bottom" constant="20" id="8eU-ki-FOE"/>
+                            <constraint firstItem="NBT-CF-BoS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="DB5-sV-D6y"/>
+                            <constraint firstItem="GAK-Vz-gHC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IkS-Ae-ZsR"/>
+                            <constraint firstItem="FZc-n2-Uu8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qoh-LX-h4P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GAK-Vz-gHC" secondAttribute="trailing" constant="20" id="TVP-eO-SEY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="NBT-CF-BoS" secondAttribute="bottom" id="TWH-zO-bfb"/>
+                            <constraint firstItem="FZc-n2-Uu8" firstAttribute="top" secondItem="GAK-Vz-gHC" secondAttribute="bottom" constant="70" id="gc5-dY-ASC"/>
+                            <constraint firstItem="oxH-BL-3Jc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qBX-Eb-dij"/>
+                            <constraint firstItem="NBT-CF-BoS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="vSL-OT-PBU"/>
+                            <constraint firstItem="GAK-Vz-gHC" firstAttribute="top" secondItem="oxH-BL-3Jc" secondAttribute="bottom" constant="30" id="vbw-QV-s3Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLB" destination="GAK-Vz-gHC" id="Cb1-J2-q8E"/>
+                        <outlet property="imageView" destination="NBT-CF-BoS" id="qqh-RN-WCx"/>
+                        <outlet property="probabilityLB" destination="oxH-BL-3Jc" id="ofj-4D-QpW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img" width="259" height="194"/>
+    </resources>
+</document>
